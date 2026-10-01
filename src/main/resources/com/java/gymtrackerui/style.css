@@ -1,0 +1,314 @@
+/* ============ Base ============ */
+
+.root {
+    -fx-background-color: white;
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+
+.label {
+    -fx-text-fill: #091540;
+    -fx-font-size: 13px;
+}
+
+.title-text {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #091540;
+}
+
+.subtitle-text {
+    -fx-font-size: 12px;
+    -fx-text-fill: #1B2CC1;
+}
+
+/* ============ Inputs (general - workouts, goals, measurements forms) ============ */
+
+.text-field, .password-field, .combo-box {
+    -fx-background-color: #f4f8fc;
+    -fx-text-fill: #091540;
+    -fx-prompt-text-fill: #9aa8b5;
+    -fx-background-radius: 6;
+    -fx-border-radius: 6;
+    -fx-border-color: #d6e4f0;
+    -fx-border-width: 1.5;
+    -fx-padding: 10;
+    -fx-font-size: 13px;
+}
+
+.text-field:focused, .password-field:focused, .combo-box:focused {
+    -fx-border-color: #7692FF;
+    -fx-background-color: white;
+}
+
+/* ============ Buttons (general) ============ */
+
+.button {
+    -fx-background-color: #1B2CC1;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 6;
+    -fx-padding: 10 20;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #7692FF;
+}
+
+.button:pressed {
+    -fx-background-color: #091540;
+}
+
+/* ============ Lists ============ */
+
+.list-view {
+    -fx-background-color: white;
+    -fx-control-inner-background: white;
+    -fx-text-fill: #091540;
+    -fx-background-radius: 6;
+    -fx-border-radius: 6;
+    -fx-border-color: #d6e4f0;
+}
+
+.list-cell {
+    -fx-text-fill: #091540;
+    -fx-background-color: white;
+    -fx-padding: 10;
+    -fx-border-color: transparent transparent #eef3f8 transparent;
+}
+
+.list-cell:hover {
+    -fx-background-color: #f4f8fc;
+}
+
+.list-cell:filled:selected {
+    -fx-background-color: #ABD2FA;
+    -fx-text-fill: #091540;
+}
+
+/* ============ Links ============ */
+
+.hyperlink {
+    -fx-text-fill: #1B2CC1;
+    -fx-underline: false;
+    -fx-font-size: 12px;
+}
+
+.hyperlink:hover {
+    -fx-text-fill: #091540;
+    -fx-underline: true;
+}
+
+/* ============ Cards (dashboard stats) ============ */
+
+.card {
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+    -fx-padding: 20;
+    -fx-border-color: #eef3f8;
+    -fx-border-width: 1;
+    -fx-border-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(9,21,64,0.08), 10, 0, 0, 3);
+}
+
+/* ============ Dashboard header ============ */
+
+.app-header {
+    -fx-background-color: white;
+    -fx-padding: 16 30;
+    -fx-border-color: transparent transparent #eef3f8 transparent;
+    -fx-border-width: 1;
+}
+
+.app-header-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #091540;
+}
+
+.logout-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #b74747;
+    -fx-font-weight: bold;
+    -fx-font-size: 12px;
+    -fx-padding: 6 10;
+}
+
+.logout-button:hover {
+    -fx-background-color: #fbebeb;
+    -fx-text-fill: #b74747;
+}
+
+/* ============ Dashboard nav tiles ============ */
+
+.tile-button {
+    -fx-background-color: #f4f8fc;
+    -fx-text-fill: #091540;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 10;
+    -fx-padding: 22;
+    -fx-alignment: center-left;
+    -fx-pref-width: 320;
+}
+
+.tile-button:hover {
+    -fx-background-color: #ABD2FA;
+}
+
+.grid-pane {
+    -fx-background-color: transparent;
+}
+
+/* ============ Auth hero panel (login/register left side) ============ */
+
+.hero-panel {
+    -fx-background-color: linear-gradient(to bottom right, #091540, #1B2CC1);
+    -fx-padding: 50;
+}
+
+.hero-title {
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.hero-subtitle {
+    -fx-font-size: 13px;
+    -fx-text-fill: #ABD2FA;
+    -fx-wrap-text: true;
+}
+
+.logo-badge {
+    -fx-background-color: rgba(255,255,255,0.15);
+    -fx-background-radius: 8;
+    -fx-padding: 6 10;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+}
+
+.logo-text {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 15px;
+}
+
+.badge-pill {
+    -fx-background-color: rgba(255,255,255,0.12);
+    -fx-background-radius: 20;
+    -fx-padding: 6 14;
+    -fx-text-fill: #ABD2FA;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+}
+
+.hero-headline {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.hero-headline-accent {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #7692FF;
+}
+
+.check-icon {
+    -fx-background-color: #7692FF;
+    -fx-background-radius: 20;
+    -fx-min-width: 20;
+    -fx-min-height: 20;
+    -fx-max-width: 20;
+    -fx-max-height: 20;
+    -fx-text-fill: #091540;
+    -fx-font-weight: bold;
+    -fx-font-size: 11px;
+    -fx-alignment: center;
+}
+
+.check-item-text {
+    -fx-text-fill: #ABD2FA;
+    -fx-font-size: 12px;
+}
+
+/* ============ Auth form panel (login/register right side) ============ */
+
+.form-panel {
+    -fx-background-color: #f4f8fc;
+}
+
+.form-title {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #091540;
+}
+
+.form-subtitle {
+    -fx-font-size: 12px;
+    -fx-text-fill: #1B2CC1;
+}
+
+.auth-card {
+    -fx-background-color: white;
+    -fx-background-radius: 16;
+    -fx-padding: 40;
+    -fx-effect: dropshadow(gaussian, rgba(9,21,64,0.15), 25, 0, 0, 8);
+}
+
+/* ============ Sign in / Create account tab bar ============ */
+
+.tab-bar {
+    -fx-background-color: #e4ecf9;
+    -fx-background-radius: 8;
+    -fx-padding: 4;
+}
+
+.tab-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #1B2CC1;
+    -fx-font-weight: bold;
+    -fx-font-size: 12px;
+    -fx-padding: 8 0;
+    -fx-cursor: hand;
+    -fx-background-radius: 6;
+}
+
+.tab-button-active {
+    -fx-background-color: white;
+    -fx-text-fill: #091540;
+    -fx-font-weight: bold;
+    -fx-font-size: 12px;
+    -fx-padding: 8 0;
+    -fx-background-radius: 6;
+    -fx-effect: dropshadow(gaussian, rgba(9,21,64,0.15), 4, 0, 0, 1);
+}
+
+/* ============ Icon-prefixed auth inputs ============ */
+
+.input-wrapper {
+    -fx-background-color: #f4f8fc;
+    -fx-background-radius: 6;
+    -fx-border-color: #d6e4f0;
+    -fx-border-radius: 6;
+    -fx-border-width: 1.5;
+    -fx-padding: 2 10;
+    -fx-alignment: center-left;
+    -fx-spacing: 8;
+}
+
+.input-icon {
+    -fx-text-fill: #1B2CC1;
+    -fx-font-size: 13px;
+}
+
+.input-inner {
+    -fx-background-color: transparent;
+    -fx-border-width: 0;
+    -fx-padding: 8 0;
+    -fx-font-size: 13px;
+    -fx-text-fill: #091540;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}

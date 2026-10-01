@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.java.gymtrackerui.DashboardController">
+
+    <HBox styleClass="app-header" alignment="CENTER_LEFT" spacing="10">
+        <Label text="Gym Progress Tracker" styleClass="app-header-title"/>
+        <Region HBox.hgrow="ALWAYS"/>
+        <Label fx:id="welcomeLabel" styleClass="subtitle-text"/>
+        <Button text="Logout" onAction="#handleLogout" styleClass="logout-button"/>
+    </HBox>
+
+    <ScrollPane fitToWidth="true" style="-fx-background-color: transparent;" VBox.vgrow="ALWAYS">
+
+        <VBox spacing="20">
+
+            <padding>
+                <Insets top="25" right="30" bottom="25" left="30"/>
+            </padding>
+
+            <HBox spacing="16">
+
+                <VBox styleClass="card" alignment="CENTER" spacing="4" HBox.hgrow="ALWAYS">
+                    <Label fx:id="totalWorkoutsLabel" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #384959;"/>
+                    <Label text="Total Workouts" styleClass="subtitle-text"/>
+                </VBox>
+
+                <VBox styleClass="card" alignment="CENTER" spacing="4" HBox.hgrow="ALWAYS">
+                    <Label fx:id="totalExercisesLabel" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #384959;"/>
+                    <Label text="Sets Logged" styleClass="subtitle-text"/>
+                </VBox>
+
+            </HBox>
+
+            <VBox styleClass="card" spacing="6">
+                <Label text="Most Recent Workout" style="-fx-font-weight: bold; -fx-text-fill: #384959;"/>
+                <Label fx:id="recentWorkoutLabel" styleClass="subtitle-text" wrapText="true"/>
+            </VBox>
+
+            <Label text="Quick Access" styleClass="title-text" style="-fx-padding: 10 0 0 0;"/>
+
+            <FlowPane hgap="14" vgap="14">
+
+                <Button text="My Workouts" onAction="#goToWorkouts" styleClass="tile-button"/>
+                <Button text="Calendar" onAction="#goToCalendar" styleClass="tile-button"/>
+                <Button text="Goals" onAction="#goToGoals" styleClass="tile-button"/>
+                <Button text="Body Measurements" onAction="#goToMeasurements" styleClass="tile-button"/>
+                <Button text="Exercises" onAction="#goToExercises" styleClass="tile-button"/>
+                <Button text="My Profile" onAction="#goToProfile" styleClass="tile-button"/>
+
+            </FlowPane>
+
+        </VBox>
+
+    </ScrollPane>
+
+</VBox>

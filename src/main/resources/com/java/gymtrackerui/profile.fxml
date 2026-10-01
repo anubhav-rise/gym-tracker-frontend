@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="12" xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.java.gymtrackerui.ProfileController">
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="My Profile" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+
+    <Label fx:id="emailLabel" style="-fx-text-fill: gray;"/>
+
+    <TextField fx:id="fullNameField" promptText="Full Name"/>
+
+    <TextField fx:id="dobField" promptText="Date of Birth (YYYY-MM-DD)"/>
+
+    <ComboBox fx:id="genderCombo" promptText="Gender"/>
+
+    <TextField fx:id="heightField" promptText="Height (cm)"/>
+
+    <HBox spacing="10">
+        <Button text="Save Changes" onAction="#handleSave"/>
+        <Button text="Back to Dashboard" onAction="#goBack"/>
+    </HBox>
+
+    <Label fx:id="statusLabel"/>
+
+</VBox>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<HBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.java.gymtrackerui.RegisterController">
+
+    <VBox styleClass="hero-panel" prefWidth="360" spacing="30" HBox.hgrow="NEVER">
+
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <Label text="GT" styleClass="logo-badge"/>
+            <Label text="Gym Progress Tracker" styleClass="logo-text"/>
+        </HBox>
+
+        <Label text="●  Join today" styleClass="badge-pill" maxWidth="Infinity"/>
+
+        <VBox spacing="0">
+            <Label text="A cleaner way" styleClass="hero-headline" wrapText="true"/>
+            <Label text="to reach your goals." styleClass="hero-headline-accent" wrapText="true"/>
+        </VBox>
+
+        <Label text="Create your account and start tracking workouts, goals, and progress today."
+               styleClass="hero-subtitle" wrapText="true"/>
+
+        <VBox spacing="14">
+
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Label text="✓" styleClass="check-icon"/>
+                <Label text="Free to get started" styleClass="check-item-text"/>
+            </HBox>
+
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Label text="✓" styleClass="check-icon"/>
+                <Label text="Your data, your progress" styleClass="check-item-text"/>
+            </HBox>
+
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Label text="✓" styleClass="check-icon"/>
+                <Label text="Simple, focused, effective" styleClass="check-item-text"/>
+            </HBox>
+
+        </VBox>
+
+    </VBox>
+
+    <StackPane styleClass="form-panel" HBox.hgrow="ALWAYS">
+
+        <VBox styleClass="auth-card" spacing="16" maxWidth="340" maxHeight="Infinity" alignment="CENTER">
+
+            <Label text="Create account" styleClass="form-title"/>
+            <Label text="Start your fitness journey today" styleClass="form-subtitle" wrapText="true"/>
+
+            <HBox styleClass="tab-bar" spacing="4">
+                <Button text="Sign in" onAction="#goToLogin" styleClass="tab-button" HBox.hgrow="ALWAYS" maxWidth="Infinity"/>
+                <Label text="Create account" styleClass="tab-button-active" HBox.hgrow="ALWAYS" maxWidth="Infinity" alignment="CENTER"/>
+            </HBox>
+
+            <VBox spacing="6">
+                <Label text="Full Name" style="-fx-font-size: 11px; -fx-font-weight: bold;"/>
+                <HBox styleClass="input-wrapper">
+                    <Label text="◆" styleClass="input-icon"/>
+                    <TextField fx:id="fullNameField" promptText="Your name" styleClass="input-inner" HBox.hgrow="ALWAYS"/>
+                </HBox>
+            </VBox>
+
+            <VBox spacing="6">
+                <Label text="Email" style="-fx-font-size: 11px; -fx-font-weight: bold;"/>
+                <HBox styleClass="input-wrapper">
+                    <Label text="✉" styleClass="input-icon"/>
+                    <TextField fx:id="emailField" promptText="you@example.com" styleClass="input-inner" HBox.hgrow="ALWAYS"/>
+                </HBox>
+            </VBox>
+
+            <VBox spacing="6">
+                <Label text="Password" style="-fx-font-size: 11px; -fx-font-weight: bold;"/>
+                <HBox styleClass="input-wrapper">
+                    <Label text="●" styleClass="input-icon"/>
+                    <PasswordField fx:id="passwordField" promptText="Create a password" styleClass="input-inner" HBox.hgrow="ALWAYS"/>
+                </HBox>
+            </VBox>
+
+            <Button text="Create account  →" onAction="#handleRegister" maxWidth="Infinity"/>
+
+            <Label fx:id="statusLabel" wrapText="true"/>
+
+        </VBox>
+
+    </StackPane>
+</HBox>

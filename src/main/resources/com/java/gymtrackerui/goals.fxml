@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="12" xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.java.gymtrackerui.GoalsController">
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="My Goals" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+
+    <ListView fx:id="goalListView" prefHeight="180"/>
+
+    <Label text="Add New Goal:" style="-fx-font-weight: bold;"/>
+
+    <ComboBox fx:id="goalTypeCombo" promptText="Goal Type"/>
+
+    <TextField fx:id="baselineField" promptText="Baseline value (e.g. current weight)"/>
+
+    <TextField fx:id="targetField" promptText="Target value"/>
+
+    <TextField fx:id="startDateField" promptText="Start date (YYYY-MM-DD)"/>
+
+    <TextField fx:id="targetDateField" promptText="Target date (YYYY-MM-DD)"/>
+
+    <HBox spacing="10">
+        <Button text="View Progress" onAction="#handleViewProgress"/>
+        <Button text="Add Goal" onAction="#handleAddGoal"/>
+        <Button text="Delete Selected" onAction="#handleDeleteGoal"/>
+        <Button text="Back to Dashboard" onAction="#goBack"/>
+    </HBox>
+
+    <Label fx:id="statusLabel"/>
+
+</VBox>

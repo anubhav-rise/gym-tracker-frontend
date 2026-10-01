@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="10" xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.java.gymtrackerui.MeasurementsController">
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="Body Measurements" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+
+    <ListView fx:id="measurementListView" prefHeight="160"/>
+
+    <Label text="Add New Measurement:" style="-fx-font-weight: bold;"/>
+
+    <TextField fx:id="dateField" promptText="Date (YYYY-MM-DD)"/>
+
+    <TextField fx:id="weightField" promptText="Weight (kg)"/>
+
+    <TextField fx:id="waistField" promptText="Waist (cm) - optional"/>
+
+    <TextField fx:id="chestField" promptText="Chest (cm) - optional"/>
+
+    <HBox spacing="10">
+        <Button text="Add Measurement" onAction="#handleAddMeasurement"/>
+        <Button text="Delete Selected" onAction="#handleDeleteMeasurement"/>
+        <Button text="Back to Dashboard" onAction="#goBack"/>
+    </HBox>
+
+    <Label fx:id="statusLabel"/>
+
+</VBox>
